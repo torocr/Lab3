@@ -67,5 +67,22 @@ public class HandPokerTest {
 		
 		System.out.println("");
 	}
+	
+	@Test
+	public void StraightTest1() {
+		System.out.println("Straight");
+		System.out.println("");
+		HandPoker hp = new HandPoker();
+		hp.AddCard(new Card(eSuit.CLUBS,eRank.TWO));
+		hp.AddCard(new Card(eSuit.HEARTS,eRank.THREE));
+		hp.AddCard(new Card(eSuit.DIAMONDS,eRank.FOUR));
+		hp.AddCard(new Card(eSuit.SPADES,eRank.FIVE));
+		hp.AddCard(new Card(eSuit.CLUBS,eRank.SIX));
+		hp.ScoreHand();
+		
+		assertEquals(hp.isStraight(),true);
+		
+		System.out.println("");
+	}
 
 }
